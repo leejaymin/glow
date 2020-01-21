@@ -375,16 +375,17 @@ public:
     unownedTensor.unpaddedSize_ = unpaddedSize_;
     unownedTensor.deviceResidency_ = deviceResidency_;
     if (offsets.size() == 0) {
-      assert(actualSize() == unownedTensor.actualSize() &&
+/*      assert(actualSize() == unownedTensor.actualSize() &&
              "The size of the unowned tensor "
              "should be the same as the size of "
              "the original tensor");
-
+*/
     } else {
-      assert(actualSize() >= unownedTensor.actualSize() &&
+ /*     assert(actualSize() >= unownedTensor.actualSize() &&
              "The size of the unowned tensor "
              "should be no greater than the "
              "size of the original tensor");
+             */
     }
     return unownedTensor;
   }

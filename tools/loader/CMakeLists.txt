@@ -2,6 +2,24 @@ add_executable(image-classifier
   Loader.cpp
   ImageClassifier.cpp)
 
+
+add_executable(Yolov2
+        Loader.cpp
+        Yolov2.cpp)
+
+target_link_libraries(Yolov2
+        PRIVATE
+        Backends
+        Base
+        Converter
+        ExecutionEngine
+        HostManager
+        Graph
+        Importer
+        GraphOptimizer
+        Quantization
+        LLVMSupport)
+
 target_link_libraries(image-classifier
                       PRIVATE
                         Backends
